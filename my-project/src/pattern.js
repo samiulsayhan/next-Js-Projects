@@ -6,17 +6,23 @@ let i;
 
 for (i = 1; i < n; i++) {
     let x = ""
+
+    // start
     for (let j = 0; j < i; j++) {
         x += "*"
     }
-    // for(let j=n;j>0;j--){
-    //     x +="1"
-    // }
+    
+    // mid
 
+    for(let j=0;j<2*(n-i);j++){
+        x+= "-"
+    }
 
-    for (let j = 1; j <= 2 * (n - i); j++) {
-                x += " ";
-        }
+    // end
+
+    for(let j=0; j<i;j++){
+        x+= "*"
+    }
 
     console.log(x);
 }
@@ -26,8 +32,23 @@ for (i = 1; i < n; i++) {
 for (i = n; i > 0; i--) {
 
     let x = ""
+
+    // start
     for (let j = 0; j < i; j++) {
         x += "*"
     }
+
+    // mid
+
+    for(let j=0;j<2*(n-i);j++){
+        x+= "-"
+    }
+
+    // end
+    
+    for(let j=0; j<i;j++){
+        x+= "*"
+    }
+
     console.log(x);
 }
