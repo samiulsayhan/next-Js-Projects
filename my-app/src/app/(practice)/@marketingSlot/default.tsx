@@ -1,7 +1,7 @@
 export default function MarketingDefault(){
     return(
-        <div>
-            <h1>Its Marketing Slot</h1>
+        <div className="w-[50%]  border-cyan-500 border-2 h-[80vh]  text-2xl font-bold">
+            <h1>Marketing Placeholder</h1>
         </div>
     )
 }
