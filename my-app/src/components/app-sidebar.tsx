@@ -20,6 +20,10 @@ const data = {
       title: "Getting Started",
       items: [
         {
+          title: "Home",
+          url: "/",
+        },
+        {
           title: "Blog Writing",
           url: "/dashboard/write-blog",
         },
