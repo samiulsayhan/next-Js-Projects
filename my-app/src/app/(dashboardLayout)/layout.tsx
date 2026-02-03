@@ -7,14 +7,27 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import Link from "next/link";
 
-export default function Page({children}:{children:React.ReactNode}) {
+export default function Page({ admin,user}:{
+
+  admin:React.ReactNode;
+  user:React.ReactNode
+
+}) {
+
+  const userInfo ={
+    role: "admin",
+
+  }
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -40,7 +53,13 @@ export default function Page({children}:{children:React.ReactNode}) {
           </Breadcrumb>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          {children}
+          {/* <div className="flex">
+            <Button asChild><Link href="/dashboard">User</Link></Button>
+            <Button asChild><Link href="/admin-dashboard">Admin</Link></Button>
+          </div> */}
+          {userInfo.role === "admin" ? admin :user}
+          
+
         </div>
          
       </SidebarInset>
