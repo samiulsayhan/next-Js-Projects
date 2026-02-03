@@ -53,10 +53,7 @@ export default function Page({ admin,user}:{
           </Breadcrumb>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          {/* <div className="flex">
-            <Button asChild><Link href="/dashboard">User</Link></Button>
-            <Button asChild><Link href="/admin-dashboard">Admin</Link></Button>
-          </div> */}
+
           {userInfo.role === "admin" ? admin :user}
           
 
